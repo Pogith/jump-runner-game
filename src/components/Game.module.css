@@ -1,0 +1,145 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 100%;
+}
+
+.game__info {
+  display: flex;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.game__stat {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.game__stat-label {
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.game__stat-value {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #4ECDC4;
+}
+
+.game__canvas-wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.game__canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.game__over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  min-width: 300px;
+}
+
+.game__over-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #FF6B6B;
+}
+
+.game__over-text {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.game__button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.game__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.game__button:active {
+  transform: translateY(0);
+}
+
+.game__instructions {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  color: white;
+  text-align: center;
+}
+
+.game__instructions-text {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+.game__instructions-highlight {
+  color: #4ECDC4;
+  font-weight: bold;
+}
+
+@media (max-width: 850px) {
+  .game__canvas {
+    width: 100%;
+  }
+
+  .game__info {
+    gap: 20px;
+    padding: 10px 20px;
+  }
+
+  .game__stat {
+    font-size: 1rem;
+  }
+
+  .game__stat-value {
+    font-size: 1.2rem;
+  }
+
+  .game__over {
+    min-width: 250px;
+    padding: 30px;
+  }
+
+  .game__over-title {
+    font-size: 2rem;
+  }
+
+  .game__over-text {
+    font-size: 1.1rem;
+  }
+}
